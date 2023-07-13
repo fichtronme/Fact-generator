@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+        }
+        
+        .nerd {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 28%;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 36px;
+            margin-top: 40px;
+        }
+        
+        h2 {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background-color: #FFDD00;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .coffee-button {
+            display: inline-block;
+            background-color: #FFDD00;
+            color: #000000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+    <title>Random Facts Generator</title>
+    <script>
+        function generateRandomFact() {
+            var randomFacts = [
+            "The Eiffel Tower was constructed in 1889.",
+                "The Great Wall of China is the longest man-made structure on Earth.",
+                "The human brain has about 100 billion neurons.",
+                "The Amazon rainforest is the largest tropical rainforest in the world.",
+                "The planet Mars is often called the 'Red Planet'.",
+                "A group of crows is called a murder.",
+                "Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
+                "The coldest temperature ever recorded on Earth was -128.6 degrees Fahrenheit (-89.2 degrees Celsius) in Antarctica.",
+                "Elephants can recognize themselves in mirrors, a trait shared by only a few other animals including humans, great apes, dolphins, and some birds.",
+                "The world's oldest known living organism is a tree named Methuselah, which is over 4,800 years old.",
+                "Cows have best friends and become stressed when they are separated from them.",
+                "The average person spends about 25 years sleeping in their lifetime.",
+                "The probability of being born on Leap Day (February 29) is about 1 in 1,461.",
+                "The shortest war in history was between Britain and Zanzibar in 1896. It lasted only 38 minutes.",
+                "The sun makes up about 99.86% of the total mass of the solar system.",
+                "The world's largest volcano is Mauna Loa in Hawaii. It stands about 13,678 feet (4,169 meters) above sea level, but its base extends about 3,100 miles (5,000 kilometers) below the ocean surface.",
+                "A single strand of spaghetti is called a 'spaghetto'.",
+                "The largest living fish species is the whale shark, which can grow up to 40 feet (12 meters) in length.",
+                "The probability of getting a royal flush in a game of poker is about 1 in 649,740.",
+                "Bananas are berries, while strawberries are not.",
+                "The world's tallest waterfall is Angel Falls in Venezuela, with a height of 3,212 feet (979 meters).",
+                "The world's smallest mammal is the bumblebee bat, also known as Kitti's hog-nosed bat. It weighs about 2 grams (0.07 ounces).",
+                "The average person walks the equivalent of three times around the world in a lifetime.",
+                "Polar bears are nearly invisible to infrared cameras due to their transparent fur.",
+                "There are more possible iterations of a game of chess than there are atoms in the observable universe.",
+                "Koalas have unique fingerprints, just like humans.",
+                "The average person has about 100,000 hairs on their head.",
+                "The world's largest desert is the Antarctic Desert, covering an area of about 5.5 million square miles (14.2 million square kilometers).",
+                "The longest recorded flight of a chicken is 13 seconds.",
+                "A single strand of human hair can support about 3.5 ounces (100 grams) in weight.",
+                "The world's largest diamond, known as the Cullinan Diamond, weighed about 3,106 carats (1.37 pounds) when it was discovered in South Africa in 1905.",
+                "There are more than 1,500 active volcanoes in the world, with approximately 50 to 70 erupting each year.",
+                "The first-ever computer programmer was a woman named Ada Lovelace, who wrote the world's first algorithm for Charles Babbage's Analytical Engine in the mid-1800s.",
+                "A flock of flamingos is called a 'flamboyance'.",
+                "The world's smallest bird is the bee hummingbird, which weighs about 2.2 grams (0.08 ounces).",
+                "The coldest temperature ever recorded in the United States was -80 degrees Fahrenheit (-62.2 degrees Celsius) in Alaska.",
+                "A group of porcupines is called a 'prickle'.",
+                "The first known recipe for ice cream dates back to the 4th century B.C. in Persia.",
+                "The world's fastest land animal is the cheetah, capable of reaching speeds up to 70 miles per hour (113 kilometers per hour).",
+                "The oldest known musical instrument is a bone flute found in Germany, estimated to be about 42,000 years old.",
+                "The Great Barrier Reef in Australia is the largest living structure on Earth and is visible from outer space.",
+                "The world's largest species of shark is the whale shark, which can grow up to 40 feet (12 meters) in length.",
+                "The probability of being struck by lightning in your lifetime is about 1 in 15,300.",
+                "Penguins have only one mate for their entire life and propose by giving a pebble to their potential partner.",
+                "The oldest known writing system is cuneiform, developed by the ancient Sumerians around 3,200 B.C.",
+                "The world's largest flower, the Rafflesia arnoldii, can grow up to three feet (one meter) in diameter and weigh up to 24 pounds (11 kilograms).",
+                "The average person blinks about 15 to 20 times per minute.",
+                "The world's largest ocean is the Pacific Ocean, covering an area of about 63 million square miles (165 million square kilometers).",
+                "The fastest recorded sprint speed of a human is about 28 miles per hour (45 kilometers per hour).",
+                "The average human body contains enough iron to make a small nail.",
+                "The world's oldest known musical instrument is a flute made from a vulture's wing bone, estimated to be about 40,000 years old.",
+                "The probability of being born with extra fingers or toes is about 1 in 500.",
+                "The world's largest spider by leg span is the Goliath birdeater, which can reach up to 12 inches (30 centimeters) in diameter.",
+                "The average person has about 10,000 taste buds.",
+                "The world's largest rodent is the capybara, which can weigh up to 150 pounds (68 kilograms).",
+                "The probability of being struck by a falling meteorite is about 1 in 1.6 million.",
+                "The world's largest snake by length is the reticulated python, which can reach lengths of up to 30 feet (9 meters).",
+                "The average person produces about 25,000 quarts (23,660 liters) of saliva in their lifetime.",
+                "The world's fastest bird is the peregrine falcon, capable of reaching speeds up to 240 miles per hour (386 kilometers per hour) during its hunting stoop.",
+                "The probability of being born on the same day as your birthday twin is about 1 in 365.",
+                "If you buy me a coffee i will be very thankful",
+                "I will make more facts if i will know that people uses this site",
+            ];
+
+            var randomIndex = Math.floor(Math.random() * randomFacts.length);
+            var randomFact = randomFacts[randomIndex];
+
+            document.getElementById("randomFact").innerText = randomFact;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Facts Generator</h1>
+        <h2>If you're into interesting facts and love diving into the depths of knowledge.</h2>
+        <h3>Become the nerd today.</h3>
+        <button onclick="generateRandomFact()">Generate Random Fact</button>
+        <p id="randomFact"></p>
+        <img class="nerd" src="nerd.jpg" alt="">
+        <a class="coffee-button" href="https://www.buymeacoffee.com/fichtrone" target="_blank">Buy Me a Coffee</a>
+    </div>
+</body>
+</html>
